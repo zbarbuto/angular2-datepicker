@@ -6,8 +6,8 @@
     "Angular2",
     "date picker"
   ],
-  "main": "dist/my-date-picker/index.js",
-  "typings": "dist/my-date-picker/index.d.ts",
+  "main": "src/my-date-picker/index.js",
+  "typings": "src/my-date-picker/index.d.ts",
   "author": "Amit Mittal",
   "license": "MIT",
   "repository": {
@@ -21,7 +21,7 @@
     "start": "webpack-dev-server --config webpack.js --progress",
     "postinstall": "typings install",
     "prepublish": "tsc && npm run build-css",
-    "build-css": "node-sass --r src -o dist"
+    "build-css": "node-sass --r src -o src"
   },
   "dependencies": {
     "@angular/common": "^2.0.0-rc.4",
