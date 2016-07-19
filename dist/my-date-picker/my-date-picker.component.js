@@ -10,8 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
-var styles = require('./my-date-picker.component.scss');
-var template = require('./my-date-picker.component.html');
 var MyDatePicker = (function () {
     function MyDatePicker(elem) {
         var _this = this;
@@ -333,8 +331,8 @@ var MyDatePicker = (function () {
         core_1.Component({
             selector: 'my-date-picker',
             directives: [common_1.NgIf, common_1.NgFor, common_1.NgClass, common_1.NgStyle],
-            styles: [styles],
-            template: template
+            styleUrls: ['my-date-picker.component.css'],
+            templateUrl: 'my-date-picker.component.html'
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef])
     ], MyDatePicker);

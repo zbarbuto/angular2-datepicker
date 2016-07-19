@@ -18,9 +18,10 @@
     "node": ">=5.4"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js --progress",
-    "build:export": "tsc -out target/index.js src/my-date-picker/index",
-    "postinstall": "typings install"
+    "start": "webpack-dev-server --config webpack.js --progress",
+    "postinstall": "typings install",
+    "prepublish": "tsc && npm run build-css",
+    "build-css": "node-sass --r src -o dist"
   },
   "dependencies": {
     "@angular/common": "^2.0.0-rc.4",

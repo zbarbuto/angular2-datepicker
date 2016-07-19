@@ -3,14 +3,12 @@ import {NgIf, NgFor, NgClass, NgStyle, NgModel} from '@angular/common';
 import {IMyDate, IMyMonth, IMyWeek, IMyDayLabels, IMyMonthLabels, IMyLocales, IMyOptions} from './interfaces/index';
 
 declare var require:any;
-const styles: string = require('./my-date-picker.component.scss');
-const template: string = require('./my-date-picker.component.html');
 
 @Component({
     selector: 'my-date-picker',
     directives: [NgIf, NgFor, NgClass, NgStyle],
-    styles: [styles],
-    template
+    styleUrls: ['my-date-picker.component.css'],
+    templateUrl: 'my-date-picker.component.html'
 })
 
 export class MyDatePicker implements OnInit, OnChanges {
