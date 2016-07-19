@@ -20,7 +20,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.js --progress",
     "postinstall": "typings install",
-    "prepublish": "rsync -a --include '*/' --include '*.html' --exclude '*' src/ dist/ && tsc && npm run build-css",
+    "prepublish": "rsync -a --include '*/' --include '*.html' --exclude '*' src/ dist/ && tsc && npm run build-css && node inline-resources.js ./dist",
     "build-css": "node-sass --r src -o dist"
   },
   "dependencies": {
