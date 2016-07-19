@@ -7,14 +7,18 @@
     "module": "commonjs",
     "removeComments": true,
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "outDir": "dist",
+    "declaration": true
   },
 
   "files": [
     "src/main.ts",
     "typings/browser.d.ts"
   ],
-
+  "exclude": [
+    "node_modules"
+  ],
   "compileOnSave": false,
   "buildOnSave": false
 }
