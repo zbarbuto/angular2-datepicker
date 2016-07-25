@@ -71,6 +71,7 @@ function inlineTemplate(filePath, content) {
     const templateContent = fs.readFileSync(templateFile, 'utf-8');
     const shortenedTemplate = templateContent
       .replace(/([\n\r]\s*)+/gm, ' ')
+      .replace(/\\/g, '\\\\')
       .replace(/"/g, '\\"');
     return `template: "${shortenedTemplate}"`;
   });
@@ -93,6 +94,7 @@ function inlineStyle(filePath, content) {
           const styleContent = fs.readFileSync(styleFile, 'utf-8');
           const shortenedStyle = styleContent
             .replace(/([\n\r]\s*)+/gm, ' ')
+      .replace(/\\/g, '\\\\')
             .replace(/"/g, '\\"');
           return `"${shortenedStyle}"`;
         })
