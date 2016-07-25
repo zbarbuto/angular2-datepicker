@@ -94,7 +94,7 @@ function inlineStyle(filePath, content) {
           const styleContent = fs.readFileSync(styleFile, 'utf-8');
           const shortenedStyle = styleContent
             .replace(/([\n\r]\s*)+/gm, ' ')
-      .replace(/\\/g, '\\\\')
+            .replace(/\\/g, '\\\\')
             .replace(/"/g, '\\"');
           return `"${shortenedStyle}"`;
         })
